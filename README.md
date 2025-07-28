@@ -1,31 +1,37 @@
-# 🎙️ Emotion Analysis from Voice
+# 🎙️ Emotion Detection from Voice
 
-A lightweight Python tool (130 LOC) that captures live microphone input and detects the speaker's emotion using audio features. Built with `librosa`, `scikit-learn`, and a pre-trained model on the RAVDESS dataset.
-
-## 🚀 Features
-
-- 🎧 Real-time microphone input
-- 🔍 MFCC (Mel-Frequency Cepstral Coefficients) feature extraction
-- 🧠 Emotion classification using Random Forest
-- 📊 Trained on the [RAVDESS dataset](https://zenodo.org/record/1188976)
-- 🛠 Simple and modular (130 lines of code)
+A Python tool that detects human emotions from real-time speech input using MFCC feature extraction and a trained `RandomForestClassifier`. Supports both a command-line interface and a desktop GUI built with Tkinter.
 
 ---
 
-## 🎯 Emotions Detected
+## 🧠 What It Does
 
-- Happy
-- Sad
-- Angry
-- Fearful
-- Calm
-- Neutral
-
-> *(You can customize the label set based on the model and dataset.)*
+- Captures live audio from your microphone
+- Extracts Mel-Frequency Cepstral Coefficients (MFCCs) from speech
+- Classifies the emotion using a Random Forest model trained on the [RAVDESS dataset](https://zenodo.org/record/1188976)
+- Displays the predicted emotion as text and emoji 😄😢😠😲
 
 ---
 
-## 🧰 Requirements
+## 🎯 Supported Emotions
+
+| Code | Emotion    | Emoji |
+|------|------------|-------|
+| 01   | Neutral    | 😐    |
+| 02   | Calm       | 😌    |
+| 03   | Happy      | 😄    |
+| 04   | Sad        | 😢    |
+| 05   | Angry      | 😠    |
+| 06   | Fearful    | 😱    |
+| 07   | Disgust    | 🤢    |
+| 08   | Surprised  | 😲    |
+
+---
+
+## 🛠️ Requirements
+
+Install the necessary Python libraries:
 
 ```bash
-pip install librosa sounddevice numpy scikit-learn
+pip install numpy librosa scikit-learn sounddevice
+
